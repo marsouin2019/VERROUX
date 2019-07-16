@@ -1,0 +1,30 @@
+
+body{
+    height: 50%;
+    background-image: url(/portfolio_2/image/background_deco.png);
+    background-position: top;
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-size: 150%;
+color: white;
+}
+
+/*.container{
+    background-image: url(/portfolio_2/image/background_deco.png);
+}
+*/
+
+img{
+    padding: 5px 0 15px 0;
+}
+
+.menu{
+    display: flex;
+    list-style: none;
+    
+}
+.menu > a > li{ 
+    padding-right: 15px;
+}
+.liste{
+    list-style: none;
+}

@@ -1,0 +1,94 @@
+body{
+  color:rgb(143, 8, 8);
+  background-color:#ad1659;
+  font-size: 18px;
+  width: 980px;
+  margin:auto auto;
+}
+h1{
+  font-size: 60px;
+  text-align: center;
+  color:#153657;
+  text-decoration: underline;
+}
+h2{
+  font-size: 30px;
+  text-decoration: underline;
+  text-orientation: capitalize;
+  color:#153657;
+}
+p{
+font-size: 18px;
+color:white;
+
+}
+.logo img{
+  width: 200px;
+  height: 200px;
+}
+.search{
+  width: 780px;
+}
+.compte img{
+width:35px;
+height: 35px;
+}
+header{
+  width:980px;
+  height: 150px; 
+  display:flex;
+}
+nav>ul{
+display: flex;
+list-style:none;
+width:950px;
+height: 150px;
+}
+/*mon menue'header'*/
+nav>ul li{
+
+  padding-left: 80px;
+  padding-right: 80px;
+
+}
+article{
+  display:flex;
+margin-bottom: 50px;
+}
+p{
+  padding-right: 10px;
+}
+article:last-child{
+  flex-direction: column; 
+}
+article>img{
+  width: 200px;
+  margin-bottom: 50px;
+}
+main{
+  padding: 20px;
+}
+article:last-child>ul{
+  position: absolute;;
+  margin-left:200px;
+}
+
+.fruit {
+  width:200px;
+height: 200px;
+}
+footer{
+  width: 980px;
+  display: flex;
+  flex-wrap: wrap;
+}
+footer>nav{
+  width: 490px;
+  height: 150px;
+}
+footer>adresse{
+  width: 490px;
+height: 150px;
+}
+
+
