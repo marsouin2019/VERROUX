@@ -1,0 +1,22 @@
+
+ul{
+    list-style: none;
+
+}
+h1,h2,h3{
+    color: orange ;
+}
+.table .thead-dark th {
+    background: blue;
+}
+.table > tbody:nth-child(2) > tr:nth-child(2){
+    background-color: orange;}
+     .table > tbody:nth-child(2) > tr:nth-child(4){
+        background-color: orange;
+    }
+    .img1{
+        width: 500px;
+    }
+    .img2{
+        width: 500px;
+    }
