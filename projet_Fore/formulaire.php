@@ -23,20 +23,7 @@ echo $typeInscription;
                             <div class="container bordF">
                                 <h4 class="title">Pré-inscription formation</h4>
                                 <form action="" method="POST" name="frmIns" id="frmIns">
-                                        <div class="formI">
-                                        <div class="form-group">
-                                            <select class="custom-select mr-sm-2" name="frmFormation" id="frmFormation">
-                                                <!-- <option selected> Civilité </  option> -->
-                                                <option value="">Choisissez votre formation</option>
-                                                <option value="1">1 </option>
-                                                <option value="2">2</option>
-                                                <option value="3">3</option>
-                                                <option value="4">4</option>
-                                                <option value="5">5</option>
-                                                <option value="6">6</option>
-                                            </select>
-                                        </div>
-                                        </div>
+                                       
                                         
                                         <div class="form-group">
                                             <label for="">Civilite</label>
