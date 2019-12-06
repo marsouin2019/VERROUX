@@ -25,7 +25,7 @@ define("DATABASE", "dweb");
 //connexion database
 $mysqli = mysqli_connect(SERVEUR,USER,PASSWORD,DATABASE);
 
-print_r($mysqli);  
+//print_r($mysqli);  
 
 //si je ne suis pas connecter affiche moi l'erreur
 if(!$mysqli)

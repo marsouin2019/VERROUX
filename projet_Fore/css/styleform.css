@@ -1,0 +1,73 @@
+
+#formulaire{
+    background-color:#fff;
+}
+body{
+    background-color: rgba(255, 255, 255, 0.863);
+}
+.bordF{
+    border: solid 2px #3b1369;
+    box-shadow: 10px 10px 10px 10px grey;
+}
+.form-group{
+    margin-bottom: 1rem;
+}
+
+h4  {
+    color: #1e043d;
+    text-transform: initial;
+}
+#frmFormation{
+    width: 63%;
+}
+#frmCivilite{
+    width: 41%;
+}
+#frmSituation{
+    width: 49%;
+}
+
+input {
+    font-size: 18px;
+    padding: 10px 10px 10px 5px;
+    display: block;
+    width: 315px !important;
+    border: none;
+    border-bottom: 1px solid #757575;
+    box-shadow: 10px 5px 5px #6d7094;
+    
+
+}
+.form-control{
+    border: 2px solid#ced4da;
+    border-top-color: transparent !important;
+    border-right-color: transparent !important;
+    border-left-color: transparent !important;
+    
+}
+.alert-error{
+    color: #e81123;
+    
+}
+
+.Off {
+    display: none;
+}
+.msg {
+    width: 90%;
+    
+    
+}
+
+/*Partie questionnaire*/
+
+input[type="checkbox"] {
+    width: 10px !important;
+   
+  }
+.formI {
+    display: block;
+}
+.testI {
+    display: block;
+}

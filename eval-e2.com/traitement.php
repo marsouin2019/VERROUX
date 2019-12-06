@@ -1,25 +1,39 @@
  <?php
+ session_start();
+ 
 include("class/connect.php");
 include("class/cl_traitement.php");
 //création de l'objet
 $addPersonne = new Personne($mysqli);
-//appel methode add_personne
-$addPersonne-> add_personne($_POST);
+// les conditions if/else ou switch/case
+
+//$_POST[*frmForm] // valeur soit frmRegisster soit frmLogin
+
+switch($_POST["frmForm"])
+{
+    case "frmRegister";
+    //appel methode add_personne
+    $addPersonne->add_personne($_POST);
+    break;
+    case "frmLogin";
+    //appel methode login
+    $addPersonne->login($_POST);
+    break;
+    case "frmPass";
+    //appel methode pass
+   //echo"traitement email mot de passe";
+    $addPersonne->resetPassword($_POST["frmEmail"]);
+
+};
+ 
+
+
+
+
+
 /*
 
 
-
-
-
-
-
-
-
-
-
-
-
- /*
 //traitement du formulaire register
 //print_r($_POST);
 

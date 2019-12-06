@@ -1,31 +1,24 @@
-<!DOCTYPE html>
-<html lang="en">
 
-<head>
-
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="">
-  <meta name="author" content="">
-
-  <title>Full Width Pics - Start Bootstrap Template</title>
-
-  <!-- Bootstrap core CSS -->
-  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-
-  <!-- Custom styles for this template -->
-  <link href="css/full-width-pics.css" rel="stylesheet">
-
-</head>
 
 <body>
+ <!-- Header - set the background image for the header in the line below -->
+<?php
+  $titlePage="Register page";
+  include("includes/header.php");
+?>
  <?php
   include("includes/navigation.php");
 ?>
-  <!-- Header - set the background image for the header in the line below -->
-  <?php
-  include("includes/header.php");
+<?php
+  
+  $_SESSION = array();
+  session_destroy();
+
+  print_r($_SESSION);
 ?>
+ 
+
+
 
   <!-- Content section -->
   <section class="py-5">
@@ -37,7 +30,7 @@
       <div class="form-group">
      <label for="">civilite</label> 
     <select class="custom-select mr-sm-2" id="frmCivilite" name="frmCivilite">
-        <!-- <option selected> Civilité </option> -->
+        <!-- <option selected> Civilité </  option> -->
         <option value="M">Monsieur</option>
         <option value="Mme">Madame</option>
       </select>
@@ -87,7 +80,7 @@
     <input type="password" class="form-control" id="frmPass" aria-describedby="" placeholder="Indiquer mot de passe(*)" name="frmPass" required>
     <small id="passwordHelp" class="form-text text-muted">Doit contenir entre 8 et 20 caractères.</small>
   </div>
-  <button type="submit" class="btn btn-primary">Inscription</button>
+  <input type="submit" class="btn btn-primary" name="frmForm" value="frmRegister">
 </form>    
     </div>
   </section>
