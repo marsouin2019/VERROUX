@@ -9,9 +9,8 @@ include("includes/navigation.php");
 
 $typeInscription = ($_GET["insc"] == "inscriptionT") ? "test" : "formation";
 
-echo $typeInscription;
 ?>
-<body>
+
   
         <main>          
                 <div class="container-fluid">
@@ -22,8 +21,8 @@ echo $typeInscription;
                           <div class="col-sm" id="formulaire">
                             <div class="container bordF">
                                 <h4 class="title">Pré-inscription formation</h4>
-                                <form action="" method="POST" name="frmIns" id="frmIns">
-                                       
+                                <form action="traitement.php" method="POST" name="frmIns" id="frmIns">
+                                       <h4><?php echo $typeInscription; ?></h4>
                                         
                                         <div class="form-group">
                                             <label for="">Civilite</label>
@@ -61,6 +60,16 @@ echo $typeInscription;
                                         <input type="date" id="frmBday" name="frmBday" required pattern="[0-9]{4}-[0-9]{2}-[0-9]{2}">
                                         </div>
                                         
+                                        <div class="form-group row">
+                                         <div class="col-sm-7">
+                                                <label for="">Pays</label>
+                                                <input id="frmPays"  class="form-control"  type="text" placeholder="Indiquer le Pays(*)" name="frmPays">
+                                            </div>
+                                            <div class="msgPays Off col-sm-5">
+                                                <p class="alert alert-error">Vous avez oublier de remplir ce champ !</p>
+                                            </div>
+                                         </div> 
+
                                         <div class="form-group row">
                                          <div class="col-sm-7">
                                                 <label for="">Pays de naissance</label>
@@ -103,10 +112,10 @@ echo $typeInscription;
                                             <select class="custom-select mr-sm-2" name="frmSituation" id="frmSituation">
                                                 <!-- <option selected> Civilité </  option> -->
                                                 <option value="">Situation familiale</option>
-                                                <option value="1">Célibataire</option>
-                                                <option value="2">Divorcé(e)</option>
-                                                <option value="3">Marié(e) ou vivant maritalement</option>
-                                                <option value="4">Veuf(veuve)</option>
+                                                <option value="Celibataire">Célibataire</option>
+                                                <option value="Divorce">Divorcé(e)</option>
+                                                <option value="Marie">Marié(e) ou vivant maritalement</option>
+                                                <option value="Veuf">Veuf(veuve)</option>
                                                 
                                             </select>
                                         </div>
@@ -123,7 +132,7 @@ echo $typeInscription;
                                         <div class="form-group row">
                                             <div class="col-sm-7">
                                                 <label for="">Langue première</label>
-                                                <input id="frmLanguepremièreT" class="form-control" type="text" placeholder="Indiquer votre Langue première(*)" name="frmLanguepremièreT" >
+                                                <input id="frmLanguepremièreT" class="form-control" type="text" placeholder="Indiquer votre Langue première(*)" name="frmLpremiereT" >
                                             </div>
                                             <div class="msgLpt Off col-sm-5">
                                                 <p class="alert alert-error">Vous avez oublier de remplir ce champ !</p>
@@ -159,8 +168,8 @@ echo $typeInscription;
                                        
                                         <div class="form-group row">
                                           <div class="col-sm-7">
-                                            <label for="">VIlle</label>
-                                            <input id="frmVille" class="form-control " type="text" placeholder="Indiquer votre ville(*)" name="frmVile" >
+                                            <label for="">Ville</label>
+                                            <input id="frmVille" class="form-control " type="text" placeholder="Indiquer votre ville(*)" name="frmVille" >
                                           </div>
                                             <div class="msgV Off col-sm-5">
                                               <p class="alert alert-error">Vous avez oublier de remplir ce champ !</p>
@@ -223,7 +232,7 @@ echo $typeInscription;
                                             {
                                             ?>
                                             <div class="formI" >      
-                                              <h5>Votre situation vis-àvis de l'emploi (cochez la bonne réponse):</h5>
+                                              <h5>Votre situation vis-à-vis de l'emploi (cochez la bonne réponse):</h5>
                                               <p>Avez-vous déjà travailleé en France? </p>
 
                                               <div class="form-check form-check-inline">
@@ -244,48 +253,48 @@ echo $typeInscription;
                                               <p>Vous travaillé actuellement? </p>
 
                                               <div class="form-check form-check-inline">
-                                                   <input class="form-check-input check2" type="checkbox" id="" value="1" name="travailler">
+                                                   <input class="form-check-input check2" type="checkbox" id="" value="1" name="travActu">
                                                    <label class="form-check-label" for="inlineCheckbox1">Oui</label>
                                               </div>
 
                                               <div class="form-check form-check-inline">
-                                                   <input class="form-check-input check3" type="checkbox" id="" value="0" name="travailler">
+                                                   <input class="form-check-input check3" type="checkbox" id="" value="0" name="travActu">
                                                    <label class="form-check-label" for="inlineCheckbox2">Non</label>
                                                   
                                               </div>
                                               <p>Si oui, quel métier exercez-vous?</p>
-                                              <textarea rows="1" cols="30">
+                                              <textarea rows="1" cols="30" name="metieractu">
 
                                               </textarea>
 
                                             </div>
                                             <div  >      
                                               
-                                              <p>Êtes-vous inscrit au Pôle Emploie? </p>
+                                              <p>Êtes-vous inscrit au Pôle Emploi? </p>
 
                                               <div class="form-check form-check-inline">
-                                              <input class="form-check-input check4" type="checkbox" id="" value="1" name="travailler">
+                                              <input class="form-check-input check4" type="checkbox" id="" value="1" name="poleEmploi">
                                                    <label class="form-check-label" for="inlineCheckbox1">Oui</label>
                                               </div>
 
                                               <div class="form-check form-check-inline">
-                                              <input class="form-check-input check5" type="checkbox" id="" value="1" name="travailler">
+                                              <input class="form-check-input check5" type="checkbox" id="" value="0" name="poleEmploi">
                                                    <label class="form-check-label" for="inlineCheckbox2">Non</label>
                                                   
                                               </div>
                                               <p>Si oui, depuis quand?</p>
-                                              <textarea rows="1" cols="30">
+                                              <textarea rows="1" cols="30" name="poleEmploiO">
 
                                               </textarea>
 
                                               <p>Percevez-vous des allocations chômages? </p>
 
                                               <div class="form-check form-check-inline">
-                                              <input class="form-check-input check6" type="checkbox" id="" value="1" name="travailler">
+                                              <input class="form-check-input check6" type="checkbox" id="" value="1" name="chomage">
                                                    <label class="form-check-label" for="inlineCheckbox1">Oui</label>
                                               </div>
                                               <div class="form-check form-check-inline">
-                                              <input class="form-check-input check7" type="checkbox" id="" value="1" name="travailler">
+                                              <input class="form-check-input check7" type="checkbox" id="" value="0" name="chomage">
                                                    <label class="form-check-label" for="inlineCheckbox2">Non</label>
                                                   
                                               </div>
@@ -297,17 +306,17 @@ echo $typeInscription;
                                               <p>Avez-vous déjà fait la formation A1 OFII/ANAEM? </p>
 
                                               <div class="form-check form-check-inline">
-                                              <input class="form-check-input check8" type="checkbox" id="" value="1" name="travailler">
+                                              <input class="form-check-input check8" type="checkbox" id="" value="1" name="formA1">
                                                    <label class="form-check-label" for="inlineCheckbox1">Oui</label>
                                               </div>
 
                                               <div class="form-check form-check-inline">
-                                              <input class="form-check-input check9" type="checkbox" id="" value="0" name="travailler">
+                                              <input class="form-check-input check9" type="checkbox" id="" value="0" name="formA1">
                                                    <label class="form-check-label" for="inlineCheckbox2">Non</label>
                                                   
                                               </div>
                                               <p>Si oui, en quel année?</p>
-                                              <textarea rows="1" cols="30">
+                                              <textarea rows="1" cols="30" name="formA1Oui">
 
                                               </textarea>
 
@@ -318,21 +327,21 @@ echo $typeInscription;
                                               <p>Avez-vous déjà fait la formation A2 OFII? </p>
 
                                               <div class="form-check form-check-inline">
-                                              <input class="form-check-input check10" type="checkbox" id="" value="1" name="travailler">
+                                              <input class="form-check-input check10" type="checkbox" id="" value="1" name="formA2">
                                                    <label class="form-check-label" for="inlineCheckbox1">Oui</label>
                                               </div>
 
                                               <div class="form-check form-check-inline">
-                                              <input class="form-check-input check11" type="checkbox" id="" value="0" name="travailler">
+                                              <input class="form-check-input check11" type="checkbox" id="" value="0" name="formA2">
                                                    <label class="form-check-label" for="inlineCheckbox2">Non</label>
                                                   
                                               </div>
                                               <p>Si oui, en quel année?</p>
-                                              <textarea rows="1" cols="30">
+                                              <textarea rows="1" cols="30" name="formA2Oui">
 
                                               </textarea>
                                               <p>Ou autres formations linguistiques?</p>
-                                              <textarea rows="1" cols="30">
+                                              <textarea rows="1" cols="30" name="formAutre">
 
                                               </textarea>
 
@@ -343,21 +352,21 @@ echo $typeInscription;
                                               <p>Avez-vous été scolarisé dans votre pays? </p>
 
                                               <div class="form-check form-check-inline">
-                                              <input class="form-check-input check12" type="checkbox" id="" value="1" name="travailler">
+                                              <input class="form-check-input check12" type="checkbox" id="" value="1" name="scolarisation">
                                                    <label class="form-check-label" for="inlineCheckbox1">Oui</label>
                                               </div>
 
                                               <div class="form-check form-check-inline">
-                                              <input class="form-check-input check13" type="checkbox" id="" value="0" name="travailler">
+                                              <input class="form-check-input check13" type="checkbox" id="" value="0" name="scolarisation">
                                                    <label class="form-check-label" for="inlineCheckbox2">Non</label>
                                                   
                                               </div>
                                               <p>Jusqu'en quel classe?</p>
-                                              <textarea rows="1" cols="30">
+                                              <textarea rows="1" cols="30" name="scoClasse">
 
                                               </textarea>
                                               <p>Jusqu'à quel âge?</p>
-                                              <textarea rows="1" cols="30">
+                                              <textarea rows="1" cols="30" name="scoAge">
 
                                               </textarea>
                                              </div>
@@ -367,17 +376,17 @@ echo $typeInscription;
                                               <p>Avez-vous des diplôme? </p>
 
                                               <div class="form-check form-check-inline">
-                                              <input class="form-check-input check14" type="checkbox" id="" value="1" name="travailler">
+                                              <input class="form-check-input check14" type="checkbox" id="" value="1" name="diplome">
                                                    <label class="form-check-label" for="inlineCheckbox1">Oui</label>
                                               </div>
 
                                               <div class="form-check form-check-inline">
-                                              <input class="form-check-input check15" type="checkbox" id="" value="0" name="travailler">
+                                              <input class="form-check-input check15" type="checkbox" id="" value="0" name="diplome">
                                                    <label class="form-check-label" for="inlineCheckbox2">Non</label>
                                                   
                                               </div>
                                               <p>Si oui, lesquelles?</p>
-                                              <textarea rows="1" cols="30">
+                                              <textarea rows="1" cols="30" name="diploName">
 
                                               </textarea>
                                               
@@ -389,17 +398,17 @@ echo $typeInscription;
                                               <p>Savez-vous utiliser un ordinateur? </p>
 
                                               <div class="form-check form-check-inline">
-                                              <input class="form-check-input check16" type="checkbox" id="" value="1" name="travailler">
+                                              <input class="form-check-input check16" type="checkbox" id="" value="1" name="ordinateur">
                                                    <label class="form-check-label" for="inlineCheckbox1">Oui</label>
                                               </div>
 
                                               <div class="form-check form-check-inline">
-                                              <input class="form-check-input check17" type="checkbox" id="" value="0" name="travailler">
+                                              <input class="form-check-input check17" type="checkbox" id="" value="0" name="ordinateur">
                                                    <label class="form-check-label" for="inlineCheckbox2">Non</label>
                                                   
                                               </div>
-                                              <p>Pourquoi voulez-vous faire la formation B1 OFII?(40mots maxi)</p>
-                                              <textarea rows="1" cols="30">
+                                              <p>Pourquoi voulez-vous faire la formation B1 OFII?(40 mots maxi)</p>
+                                              <textarea rows="1" cols="30" name="objetForm">
 
                                               </textarea>
                                               <p>Ou autres formations linguistiques?</p>

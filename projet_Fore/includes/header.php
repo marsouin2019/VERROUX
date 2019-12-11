@@ -14,9 +14,10 @@
       <link rel="stylesheet" href="css/styleformation.css">
       <link rel="stylesheet" href="css/styleAformation.css">
       <link rel="stylesheet" href="css/stylecoordonees.css">
+      <link rel="stylesheet" href="css/styleform.css">
       <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet" media="all">
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-      <link rel="stylesheet" href="css/styleform.css"> 
+
     <!-- Responsive Link -->     
      <link rel="stylesheet" media="screen and (max-width: 1280px)" href="petite_resolution.css" />
      

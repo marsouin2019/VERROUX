@@ -38,6 +38,17 @@ $("#frmFormation").blur(function(){
   }
   });
   
+  $("#frmPays").blur(function(){
+    if($(this).val().length == 0)
+  {
+    $(this).addClass("is-invalid");
+    $(".msgPays").removeClass("Off");
+  }else{
+    $(this).removeClass("is-invalid").addClass("is-valid");
+    $(".msgPays").addClass("Off");
+  }
+  });
+
   $("#frmPaysnaissanceT").blur(function(){
     if($(this).val().length == 0)
   {
@@ -134,16 +145,6 @@ $("#frmFormation").blur(function(){
   }
   });
 
-  $("#frmPays").blur(function(){
-    if($(this).val().length == 0)
-  {
-    $(this).addClass("is-invalid");
-    $(".msgPt").removeClass("Off");
-  }else{
-    $(this).removeClass("is-invalid").addClass("is-valid");
-    $(".msgPt").addClass("Off");
-  }
-  });
 
   $("#frmTelephone").blur(function(){
     if($(this).val().length == 0)
@@ -185,27 +186,9 @@ if ($(this).val()== 0 ) {
 
 
 
-$( "#frmIns" ).submit(function( event ) {
-  event.preventDefault();
-
-  let msg = $(".msg");
-
-  // tous les champs du formulaire
-  $("#frmIns input[type='text']").each(function () {
-    if($(this).val() == '') {
-      // ce champ est vide
-      
-      
-
-    } else {
-        // ce champ n'est pas vide
-        
-        
-    }
-});
 
 
-});
+
 
 
 
