@@ -1,0 +1,40 @@
+.container{
+    border:solid 2px #1e043d;
+    margin-top:105px;
+    margin-bottom: 105px;
+    width: 950px;
+}
+
+
+
+h1{ text-align: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    color: #1e043d
+}
+
+.form-control{
+    margin-bottom: 50px;
+    height: 50px;
+}
+
+.form-control1{
+    margin-bottom: 220px;
+    height: 50px;
+}
+
+.btn-block{
+    margin-top: 93px;
+    margin-left: -10px;
+    margin-bottom: 90px;
+    background-color: #1e043d;
+    border: #1e043d;
+    height: 60px;
+}
+
+.btn-block:hover{
+    background-color: #59219c;
+
+}
+
+

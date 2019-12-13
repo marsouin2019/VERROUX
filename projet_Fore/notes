@@ -1,0 +1,10 @@
+<form method ="POST" name="" id="" action="traitement.php">
+
+
+<input type="email" id="frmEmailAdmin" name="frmEmailAdmin class="form-control" placeholder="Email address" required="required" autofocus="autofocus">
+
+
+<input type="password" class="form-control"  id="frmPassAdmin" name="frmPassAdmin" placeholder="Password" required="required">
+
+
+<button type="submit" id="frmLogin" name="frmForm" value="frmLogin" class="btn btn-primary btn-block">Login</button>

@@ -103,7 +103,7 @@ class Personne
                     $row = $idPersonne->fetch_assoc();
 
                     $idP = $row["id"];
-                    $_SESSION["prenom"]=$row["prenom"];
+                    $_SESSION["prenom"]= $row["prenom"];
 
                     if( !empty($idP))
                     {
@@ -147,7 +147,7 @@ class Personne
             $rowP = $personne->fetch_assoc();
 
             //print_r($row);
-            // condition test longueur chaine d emot de passe
+            // condition test longueur chaine de mot de passe
 
             if(strlen($data["frmPass"]) < 8)
             {
