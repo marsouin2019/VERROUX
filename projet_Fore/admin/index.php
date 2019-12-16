@@ -130,7 +130,7 @@
         <!-- Breadcrumbs-->
         <ol class="breadcrumb">
           <li class="breadcrumb-item">
-            <a href="#">Dashboard</a>
+            <a href="#">Tableau de bord</a>
           </li>
           <li class="breadcrumb-item active">Overview</li>
         </ol>
@@ -143,7 +143,7 @@
                 <div class="card-body-icon">
                   <i class="fas fa-fw fa-comments"></i>
                 </div>
-                <div class="mr-5">Réunion!</div>
+                <div class="mr-5">Guadeloupe!</div>
               </div>
               <a class="card-footer text-white clearfix small z-1" href="http://localhost/admintest/charts.html">
                 <span class="float-left">View Details</span>
@@ -159,7 +159,7 @@
                 <div class="card-body-icon">
                   <i class="fas fa-fw fa-list"></i>
                 </div>
-                <div class="mr-5">Québec!</div>
+                <div class="mr-5">Martinique!</div>
               </div>
               <a class="card-footer text-white clearfix small z-1" href="http://localhost/admintest/charts.html">
                 <span class="float-left">View Details</span>
@@ -175,7 +175,7 @@
                 <div class="card-body-icon">
                   <i class="fas fa-fw fa-shopping-cart"></i>
                 </div>
-                <div class="mr-5">Martinique!</div>
+                <div class="mr-5">Saint-Martin!</div>
               </div>
               <a class="card-footer text-white clearfix small z-1" href="http://localhost/admintest/charts.html">
                 <span class="float-left">View Details</span>
@@ -191,7 +191,7 @@
                 <div class="card-body-icon">
                   <i class="fas fa-fw fa-life-ring"></i>
                 </div>
-                <div class="mr-5">Guadeloupe!</div>
+                <div class="mr-5">Québec!</div>
               </div>
               <a class="card-footer text-white clearfix small z-1" href="http://localhost/admintest/charts.html">
                 <span class="float-left">View Details</span>
@@ -216,7 +216,43 @@
             Data Table Example</div>
           <div class="card-body">
             <div class="table-responsive">
-              <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                    <thead>
+                    <tr>
+                        <th>Nom</th>
+                        <th>Prenom</th>
+                        <th>Email</th>
+                        <th>...</th>
+                        <th>..</th>
+                        <th>option</th>
+                    </tr>
+                    </thead>
+                    <tfoot>
+                    <tr>
+                        <th>Nom</th>
+                        <th>Prenom</th>
+                        <th>Email</th>
+                        <th>...</th>
+                        <th>..</th>
+                        <th>option</th>
+                    </tr>
+                </tfoot>
+                <tbody>
+                <tr>
+                    <td>Tiger Nixon</td>
+                    <td>System Architect</td>
+                    <td>Edinburgh</td>
+                    <td>61</td>
+                    <td>2011/04/25</td>
+                    <td>
+                    <a href="modifier_personne.php?id=15&action=modifier" class="btn btn-primary">Modifier</a>  <a href="../traitement.php?id=15&action=supprimer" class="btn btn-danger">Supprimer</a>
+                </td>
+                  </tr>
+                </tbody>
+                </table>
+
+
+              <table class="table table-bordered" id="" width="100%" cellspacing="0">
                 <thead>
                   <tr>
                     <th>Name</th>
@@ -436,7 +472,7 @@
                     <td>London</td>
                     <td>47</td>
                     <td>2009/10/09</td>
-                    <td>$1,200,000</td>
+                    <td>$1,200,000 </td>
                   </tr>
                   <tr>
                     <td>Gavin Joyce</td>

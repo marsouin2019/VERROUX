@@ -13,7 +13,7 @@ include("includes/navigation.php");
   <div class="form-group">
     <label for="exampleInputEmail1">Email</label>
     <input type="email" id="frmEmailAdmin" name="frmEmailAdmin" class="form-control1" placeholder="Email address" required>
-    <small id="emailHelp" class="form-text text-muted">Ne partagez jamais vos identifiants avec quelqu'un d'autre.</small>
+    <small id="emailHelp" class="form-text text-muted">Ne partagez jamais vos identifiants.</small>
   </div>
   <div class="form-group">
     <label for="exampleInputPassword1">Mot de passe</label>

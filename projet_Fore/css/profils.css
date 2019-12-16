@@ -13,15 +13,14 @@ h1{ text-align: center;
     color: #1e043d
 }
 
-.form-control{
-    margin-bottom: 50px;
-    height: 50px;
+#frmEmailAdmin{
+width: 900px !important;
 }
 
-.form-control1{
-    margin-bottom: 220px;
-    height: 50px;
-}
+#frmPassAdmin{
+    width: 900px !important;
+    }
+    
 
 .btn-block{
     margin-top: 93px;

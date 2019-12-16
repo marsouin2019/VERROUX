@@ -12,24 +12,51 @@ $addAdmin = new admin($mysqli);
 
 
 //$_POST[*frmForm] // valeur soit frmRegisster soit frmLogin
-switch ($_POST["frmForm"]) 
-{
-    case 'frmRegisterAdmin':
-    //appel methode add_admin
-    
-    $addAdmin->add_admin($_POST);
-    break;
-    case 'frmRegister':
-        //appel methode add_personne
-        $newInscription->add_personne($_POST);
-        break;
-    case 'frmLogin' :
-        $addAdmin->login_admin($_POST);
-    break;
-    default:
+if ($_POST) {
+    switch ($_POST["frmForm"]) 
+    {
+        case 'frmRegisterAdmin':
+        //appel methode add_admin
         
+        $addAdmin->add_admin($_POST);
         break;
+        case 'frmRegister':
+            //appel methode add_personne
+            $newInscription->add_personne($_POST);
+            break;
+        case 'frmLogin' :
+            $addAdmin->login_admin($_POST);
+        break;
+        case 'frmUpdate' :
+
+        break;
+        default:
+            
+            break;
+    }
+}else {
+    //$_GET
+    $idpersonne = $_GET["id"];
+    $action = $_GET["action"];
+
+    switch ($action) {
+        case 'modifier':
+            # code...
+            
+            break;
+        
+        default:
+            # code...
+            $newInscription->delete_personne($id);
+            break;
+    }
+
+
+    exit;
+
+    $newInscription->delete_personne($idpersonne);
 }
+
 
 
 

@@ -128,10 +128,29 @@ class Inscription
 
 
 
-    }
+    }// fin de  add_personne
+    public function update_personne (int $id){
+
+        $this->prenom = ltrim(htmlentities(ucfirst($data["frmPrenom"])));
+        $this->nom = ltrim(htmlentities(strtoupper($data["frmNom"])));
+        $this->telephone = htmlentities($data["frmTelephone"]);   
+        
+        $req = $this->connectDB->query("SELECT * FROM inscription  WHERE nom ='".$this->nom."'");
+
+        $req = $this->connectDB->query("UPDATE inscription SET nom ='".$this->nom."'  WHERE nom ='".$this->nom."'  ");
+
+
+    }// fin de modif-information
+
+    public function delete_personne( int $id ){
+        $req = $this->connectDB->query ( " DELETE  FROM inscription WHERE ");
+
+    
+
+    }//fin de delete_personne
 
 
 
-}//fin de class inscription
+} /*fin de class inscription*/
 
 
